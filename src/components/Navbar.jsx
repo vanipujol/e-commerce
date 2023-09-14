@@ -1,7 +1,7 @@
 import Brand from "./Brand.jsx";
 import MenuButton from "./MenuButton.jsx";
 import CategoryItem from "./CategoryItem.jsx";
-import CartContainer from "./CartContainer.jsx";
+import CartWidget from "./CartWidget.jsx";
 
 const Navbar = () => {
     return (
@@ -13,20 +13,20 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <CategoryItem isActive={true} name="Indumentaria"/>
+                            <CategoryItem isActive={true} name="Vitaly"/>
                         </li>
                         <li className="nav-item">
-                            <CategoryItem isActive={false} name="Mujer"/>
+                            <CategoryItem isActive={false} name="Cremas"/>
                         </li>
                         <li className="nav-item">
-                            <CategoryItem isActive={false} name="Hombre"/>
+                            <CategoryItem isActive={false} name="Shampoo"/>
                         </li>
                         <li className="nav-item">
-                            <CategoryItem isActive={false} name="Niños"/>
+                            <CategoryItem isActive={false} name="Acondicionador"/>
                         </li>
                     </ul>
                 </div>
-                <CartContainer/>
+                <CartWidget/>
             </div>
         </nav>
     );
