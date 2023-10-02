@@ -3,7 +3,7 @@ import CartItems from "./CartItems.jsx";
 
 const CartWidget = () => {
     return (
-        <div className="bg-secondary rounded p-3 position-relative" style={{cursor: "pointer"}}>
+        <div className=" rounded p-3 position-relative" style={{cursor: "pointer", backgroundColor: '#be9397'}}>
             <CartIcon color="white"/>
             <CartItems count={8}/>
         </div>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1.99999in" height="1.99999in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 2000 2000" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   
+    .fil0 {fill:none}
+    .fil1 {fill:#8B000B}
+    .fil2 {fill:#E4D62A}
+   
+  </style>
+ </defs>
+ <rect class="fil0" width="2000" height="2000" id="id_293"></rect>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+  <path class="fil1" d="M1018 371c93,-32 183,-132 163,-176 -7,-17 9,-36 28,-31 91,28 160,112 136,207l72 0c116,0 177,137 101,223l33 0c116,0 177,137 101,223l67 0c74,0 134,60 134,135 0,60 -40,111 -94,128l-262 741c-3,9 -11,15 -21,15l-952 0c-10,0 -18,-6 -22,-15l-261 -741c-54,-17 -94,-68 -94,-128 0,-75 60,-135 134,-135l67 0c-76,-86 -15,-223 101,-223l33 0c-76,-86 -15,-223 101,-223l435 0zm370 715l-154 573 273 0 201 -573 -320 0zm103 618l-982 0 31 87 920 0 31 -87zm-998 -45l273 0 -154 -573 -320 0 201 573zm847 -573l-317 0 0 573 164 0 153 -573zm-363 573l0 -573 -317 0 153 573 164 0zm574 -796l-1270 0c-49,0 -89,40 -89,89 0,49 40,88 89,88l1438 0c49,0 89,-39 89,-88 0,-49 -40,-89 -89,-89l-168 0zm-1102 -46l1102 0c49,0 89,-40 89,-89 0,-49 -40,-88 -89,-88l-1102 0c-49,0 -89,39 -89,88 0,49 40,89 89,89zm551 -223l417 0c49,0 89,-40 89,-89 0,-49 -40,-89 -89,-89l-834 0c-49,0 -89,40 -89,89 0,49 40,89 89,89l417 0zm116 -223l182 0c21,-60 -13,-120 -70,-150 -8,56 -61,114 -112,150z" id="id_294" style="fill: rgb(110, 13, 46);"></path>
+  <path class="fil2" d="M1228 221c-8,56 -61,114 -112,150l182 0c21,-60 -13,-120 -70,-150z" id="id_295" style="fill: rgb(255, 191, 187);"></path>
+  <path class="fil2" d="M1417 416l-834 0c-49,0 -89,40 -89,89 0,49 40,89 89,89l417 0 417 0c49,0 89,-40 89,-89 0,-49 -40,-89 -89,-89z" id="id_296" style="fill: rgb(255, 191, 187);"></path>
+  <path class="fil2" d="M1551 640l-1102 0c-49,0 -89,39 -89,88 0,49 40,89 89,89l1102 0c49,0 89,-40 89,-89 0,-49 -40,-88 -89,-88z" id="id_297" style="fill: rgb(255, 191, 187);"></path>
+  <path class="fil2" d="M1551 863l-1270 0c-49,0 -89,40 -89,89 0,49 40,88 89,88l1438 0c49,0 89,-39 89,-88 0,-49 -40,-89 -89,-89l-168 0z" id="id_298" style="fill: rgb(255, 191, 187);"></path>
+  <polygon class="fil2" points="1388,1086 1234,1659 1507,1659 1708,1086 " id="id_299" style="fill: rgb(255, 191, 187);"></polygon>
+  <polygon class="fil2" points="1187,1659 1340,1086 1023,1086 1023,1659 " id="id_300" style="fill: rgb(255, 191, 187);"></polygon>
+  <polygon class="fil2" points="977,1659 977,1086 660,1086 813,1659 " id="id_301" style="fill: rgb(255, 191, 187);"></polygon>
+  <polygon class="fil2" points="766,1659 612,1086 292,1086 493,1659 " id="id_302" style="fill: rgb(255, 191, 187);"></polygon>
+  <polygon class="fil2" points="1491,1704 509,1704 540,1791 1460,1791 " id="id_303" style="fill: rgb(255, 191, 187);"></polygon>
+ </g>
+</svg>
