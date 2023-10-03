@@ -5,98 +5,112 @@ export const JSON_API = {
             "price": 4000,
             "image": "/assets/products/tarta-frutal.jpeg",
             "details": "Masa sablée, rellena de crema chantilly y frutas de estación",
-            "category": "tartas"
+            "category": "tartas",
+            "id": "tarta-frutal",
         },
         {
             "name": "Tarta banana split",
             "price": 4000,
             "image": "/assets/products/banana-split.jpeg",
             "details": "Masa sablée, dulce de leche, bananas y crema chantily",
-            "category": "tartas"
+            "category": "tartas",
+            "id": "tarta-banana-split",
         },
         {
             "name": "Key lime pie",
             "price": 4500,
             "image": "/assets/products/keylime-pie.jpeg",
             "details": "Masa sablée, relleno de limon y leche condensada, crema chantilly",
-            "category": "tartas"
+            "category": "tartas",
+            "id": "key-lime-pie",
         },
         {
             "name": "Tarta de frutillas",
             "price": 4000,
             "image": "/assets/products/tarta-frutillas.jpeg",
             "details": "Masa sablée, rellena de gelatina y frutillas, decorada con crema chantilly",
-            "category": "tartas"
+            "category": "tartas",
+            "id": "tarta-frutillas",
         },
         {
             "name": "Tarta toffee",
             "price": 4500,
             "image": "/assets/products/tarta-toffee.jpg",
             "details": "Masa sablée, relleno de toffee, caramelo y frutos secos",
-            "category": "tartas"
+            "category": "tartas",
+            "id": "tarta-toffee",
         },
         {
             "name": "Lemon pie",
             "price": 4000,
             "image": "/assets/products/lemon-pie.jpeg",
             "details": "Masa sablée, crema de limón, decorada con merengue",
-            "category": "tartas"
+            "category": "tartas",
+            "id": "lemon-pie",
         },
         {
             "name": "Tarta bombón",
             "price": 4500,
             "image": "/assets/products/tarta-bombon.jpg",
             "details": "Masa sablée, relleno de dulce de leche y ganache de chocolate",
-            "category": "tartas"
+            "category": "tartas",
+            "id": "tarta-bombon",
         },
         {
             "name": "Pasta frola",
             "price": 3000,
             "image": "/assets/products/pasta-frola.jpg",
             "details": "Masa cubierta de dulce de batata o dulce de membrillo",
-            "category": "tartas"
+            "category": "tartas",
+            "id": "pasta-frola",
         },
         {
             "name": "Marquise",
             "price": 5000,
             "image": "/assets/products/marquise.png",
             "details": "Base de brownie, dulce de leche, crema chantilly y frutos rojos ",
-            "category": "tortas"
+            "category": "tortas",
+            "id": "marquise",
         },
         {
             "name": "Torta oreo",
             "price": 5000,
             "image": "/assets/products/torta-oreo.jpeg",
             "details": "Base de galletas oreo, dulce de leche y crema chantilly",
-            "category": "tortas"
+            "category": "tortas",
+            "id": "torta-oreo",
         },
         {
             "name": "Cheesecake frutos rojos",
             "price": 4000,
             "image": "/assets/products/cheese-cake.jpeg",
             "details": "Base de galleta triturada, queso crema y frutos rojos ",
-            "category": "tortas"
+            "category": "tortas",
+            "id": "cheesecake-frutos-rojos",
         },
         {
             "name": "Balcarce",
             "price": 4000,
             "image": "/assets/products/balcarce.jpeg",
             "details": "Bizcochuelo de vainilla, dulce de leche, nueces, crema chantilly y merengue seco",
-            "category": "tortas"
+            "category": "tortas",
+            "id": "balcarce",
         },
         {
             "name": "Chocotorta",
             "price": 5000,
             "image": "/assets/products/chocotorta.jpg",
             "details": "Base de galletas chocolinas, relleno de dulce de leche y queso crema",
-            "category": "tortas"
+            "category": "tortas",
+            "id": "chocotorta",
         },
         {
             "name": "Selva negra",
             "price": 5000,
             "image": "/assets/products/selva-negra.jpeg",
             "details": "Bizcochuelo de chocolate, crema chantilly y cerezas",
-            "category": "tortas"
+            "category": "tortas",
+            "id": "selva-negra",
         },
 
         {
@@ -104,70 +118,80 @@ export const JSON_API = {
             "price": 4000,
             "image": "/assets/products/tiramisu.jpeg",
             "details": "Base de vainillas, relleno de queso y decorado con cacao en polvo",
-            "category": "tortas"
+            "category": "tortas",
+            "id": "tiramisu",
         },
         {
             "name": "Torta personalizada",
             "price": 7000,
             "image": "/assets/products/personalizada.jpeg",
             "details": "Esta torta se personaliza a gusto del cliente su peso es de 3 kilos. ",
-            "category": "tortas"
+            "category": "tortas",
+            "id": "torta-personalizada",
         },
         {
             "name": "Alfajores de maicena",
             "price": 2000,
             "image": "/assets/products/alfajor-maicena.jpg",
             "details": "Tapitas de maicena, rellenos de dulce de leche y coco",
-            "category": "especialidades"
+            "category": "especialidades",
+            "id": "alfajores-maicena",
         },
         {
             "name": "Alfajores de almendra",
             "price": 2500,
             "image": "/assets/products/alfajor-almendra.jpg",
             "details": "Tapitas con masa de almendras rellenos con dulce de leche",
-            "category": "especialidades"
+            "category": "especialidades",
+            "id": "alfajores-almendra",
         },
         {
             "name": "Alfajores marplatense",
             "price": 2500,
             "image": "/assets/products/alfajor-marplatense.jpg",
             "details": "Masa de chocolate, dulce de leche y bañado en chocolate",
-            "category": "especialidades"
+            "category": "especialidades",
+            "id": "tarta-toffee",
         },
         {
             "name": "Budín inglés",
             "price": 2000,
             "image": "/assets/products/budin-ingles.jpg",
             "details": "Budín con frutos secos y frutas abrillantadas, bañado en glassé",
-            "category": "especialidades"
+            "category": "especialidades",
+            "id": "budin-ingles",
         },
         {
             "name": "Budín marmolado",
             "price": 2000,
             "image": "/assets/products/budin-marmolado.jpg",
             "details": "Budín húnedio de vainilla y chocolate, ideal para el mate",
-            "category": "especialidades"
+            "category": "especialidades",
+            "id": "budin-marmolado",
         },
         {
             "name": "Budín moka",
             "price": 2000,
             "image": "/assets/products/budin-moka.jpeg",
             "details": "Budín húmedo de chocolate y café, decorado con crema chantilly",
-            "category": "especialidades"
+            "category": "especialidades",
+            "id": "budin-moka",
         },
         {
             "name": "Pan dulce",
             "price": 2500,
             "image": "/assets/products/pan-dulce.jpeg",
             "details": "Pan dulce con frutas abrillantas y frutos secos, bañado en glassé",
-            "category": "especialidades"
+            "category": "especialidades",
+            "id": "pan-dulce",
         },
         {
             "name": "Cupcakes",
             "price": 4000,
             "image": "/assets/products/cupcake.jpg",
             "details": "Muffins rellenos con dulce de leche y decoración a elección",
-            "category": "especialidades"
+            "category": "especialidades",
+            "id": "cupcakes",
         },
     ]
 }

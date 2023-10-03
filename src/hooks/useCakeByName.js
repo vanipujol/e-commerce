@@ -6,7 +6,7 @@ export const useCakeByName = (cakeName) => {
 
     useEffect(() => {
         // Find the Cake name in the 'cakes_available' array from the JSON mock
-        const foundCake = JSON_API.cakes_available.find((cakeItem) => cakeName === cakeItem.name);
+        const foundCake = JSON_API.cakes_available.find((cakeItem) => cakeName === cakeItem.id);
 
         if (foundCake) {
             setCake(foundCake);

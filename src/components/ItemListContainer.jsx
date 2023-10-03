@@ -59,7 +59,7 @@ const ItemListContainer = () => {
                                             <Button
                                                 variant="outlined"
                                                 component={Link}
-                                                to={`/item/${cake.name}`}
+                                                to={`/item/${cake.id}`}
                                                 style={{
                                                     color: '#be9397',
                                                     border: '1px solid #be9397',
