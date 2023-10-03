@@ -5,6 +5,7 @@ export const useCakesList = () => {
     const [cakes, setCakes] = useState([]);
 
     useEffect(() => {
+        // Setting the 'cakes' state to the list of available cakes from the JSON API mock
         setCakes(JSON_API.cakes_available)
     }, []);
 

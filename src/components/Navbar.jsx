@@ -15,10 +15,11 @@ const Navbar = () => {
                             <NavLink className={`nav-link navlink-size`} to="/category/tortas"> TORTAS </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink  className={`nav-link navlink-size`} to="/category/tartas"> TARTAS </NavLink>
+                            <NavLink className={`nav-link navlink-size`} to="/category/tartas"> TARTAS </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink  className={`nav-link navlink-size`} to="/category/especialidades"> ESPECIALIDADES </NavLink>
+                            <NavLink className={`nav-link navlink-size`}
+                                     to="/category/especialidades"> ESPECIALIDADES </NavLink>
                         </li>
                     </ul>
                 </div>
