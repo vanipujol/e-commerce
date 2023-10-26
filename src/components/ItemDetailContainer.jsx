@@ -1,12 +1,15 @@
 import {useParams} from "react-router-dom";
-import {useCakeByName} from "../hooks/useCakeByName";
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { ButtonGroup, Button } from "@mui/material";
+import {useCounter} from "../hooks/useCounter.js";
 
 
 export const ItemDetailContainer = () => {
     // Getting the 'id' parameter from the URL using the 'useParams' hook
     const {id} = useParams();
+
+    const {counter, decrement, increment, reset} = useCounter(1,0,10)
 
     // Using the custom hook 'useCakeByName' to fetch cake details
     const cake = useCakeByName(id);
@@ -39,6 +42,12 @@ export const ItemDetailContainer = () => {
                     Recordá que tus pedidos se realizan con 48hs de anticipación.
                 </Typography>
             </Grid>
+            <ButtonGroup>
+                <Button onClick={decrement}>-</Button>
+                <Typography>{counter}</Typography>
+                <Button onClick={increment}>+</Button>
+                <Button onClick={reset}>Reset</Button>
+            </ButtonGroup>
         </Grid>
     );
 };
