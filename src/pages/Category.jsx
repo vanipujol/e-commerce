@@ -5,27 +5,29 @@ import { useContext } from "react";
 import CartContext from "../context/cartContext.jsx";
 import {
     Typography,
-    Grid,
+    Grid, Stack, CircularProgress,
 } from "@mui/material";
 
 function Category() {
     const params = useParams();
 
-    console.log(params)
     const { items, isLoading } = useItemsByCategory(params.id);
     const { addItem } = useContext(CartContext);
 
     if (isLoading) {
-        return <div>Cargando...</div>;
+        return (
+            <Stack sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }} spacing={2} direction="row">
+                <CircularProgress style={{color:'#623d41'}} />
+            </Stack>
+        );
     }
-    console.log(items);
 
     if (items.length === 0)
-        return <div>No hay productos con la categoría: {params.id}</div>;
+        return <div className={'rosedark-color, text-center'} style={{margin:'2em'}}>No hay productos con la categoría: {params.id}</div>;
 
     return (
         <section>
-            <Typography className={`rose-color mb-5 text-center`} variant="h4">
+            <Typography className={`rose-color text-center `} style={{margin:'0.8em'}} variant="h4">
                {params.id}
             </Typography>
             <Grid container spacing={5} justifyContent="center">

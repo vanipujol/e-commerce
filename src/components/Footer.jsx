@@ -1,16 +1,30 @@
 import React from 'react';
-import Container from '@mui/material/Container';
+import IconButton from '@mui/material/IconButton';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-const Footer = () => {
+function InstagramIconButton() {
+    const instagramURL = "https://www.instagram.com/reposteria.elda";
+    const whatsappURL = "https://w.app/reposteriaelda";
+
+    const handleInstagramClick = () => {
+        window.open(instagramURL, '_blank');
+    };
+
+    const handleWhatsappURL = () => {
+        window.open(whatsappURL, '_blank');
+    };
+
+
     return (
-        <Container maxWidth={false} style={{ padding: 0 }}>
-            <img
-                src="/assets/footer-drip.jpg"
-                alt="footer"
-                style={{ width: '100%', objectFit: 'cover', maxHeight: '100vh', marginTop: '2rem' }}
-            />
-        </Container>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '4em auto', }}>
+            <IconButton className="rosedark-color" onClick={handleInstagramClick}>
+                <InstagramIcon style={{ fontSize: 35 }} />
+            </IconButton>
+            <IconButton className="rosedark-color" onClick={handleWhatsappURL}>
+                <WhatsAppIcon style={{ fontSize: 35 }}  />
+            </IconButton>
+        </div>
     );
-};
-
-export default Footer;
+}
+export default InstagramIconButton;

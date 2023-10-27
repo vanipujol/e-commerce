@@ -8,9 +8,11 @@ import { useNavigate } from "react-router-dom";
 
 export const ItemList = ({ item, handleClick}) => {
     const navigation = useNavigate();
+
+
     return (
             <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <Card sx={{maxWidth: 400, maxHeight: 500, backgroundColor: '#F5F5F5'}}>
+                <Card sx={{maxWidth: 500, minWidth: 350, maxHeight: 500, backgroundColor: '#F5F5F5'}}>
                     <CardMedia
                         component="img"
                         alt={item.title}
@@ -22,8 +24,8 @@ export const ItemList = ({ item, handleClick}) => {
                                     className={`rose-color`}>
                             {item.title}
                         </Typography>
-                        <Typography variant="body2" style={{color: '#623d41'}}>
-                            {item.description}
+                        <Typography gutterBottom variant="body2" className='rosedark-color'>
+                            {item.categoryId}
                         </Typography>
                         <Typography variant="body1" className={`rose-color mt-2`}>
                             ${item.price}

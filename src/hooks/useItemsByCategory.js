@@ -1,5 +1,4 @@
 import {
-    and,
     collection,
     getDocs,
     getFirestore,
@@ -36,7 +35,5 @@ export default function useItemsByCategory(category) {
             })
             .finally(() => [stopLoading()]);
     }, [category, stopLoading]);
-    console.log(items)
     return { items, isLoading };
-
 }

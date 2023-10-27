@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export const useCounter = (initial = 0, min, max ) => {
+export const useQuantitySelector = (initial = 0, min, max ) => {
     if (initial < min || initial > max) initial = min
 
     const [counter, setCounter] = useState(initial)

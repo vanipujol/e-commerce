@@ -7,10 +7,17 @@ export default function CartProvider({ children }) {
         total: 0,
     });
 
-    const addItem = (item, quantity) => {
+    const addItem = (item, quantity, setSnackbarMessage, setSnackbarOpen, setSnackbarSeverity) => {
         const { items } = cart;
         const index = items.findIndex((i) => i.item.id === item.id);
 
+        console.log(item)
+        if (item.stock < quantity){
+            setSnackbarMessage("No hay suficientes productos en stock")
+            setSnackbarOpen(true);
+            setSnackbarSeverity("error")
+            return
+        }
         if (index > -1) {
             items[index].quantity += quantity;
         } else {
@@ -19,12 +26,15 @@ export default function CartProvider({ children }) {
                 quantity,
             });
         }
-
         setCart({
             ...cart,
             items,
             total: getTotal(),
         });
+
+        setSnackbarMessage("Items agregado al carrito exitosamente")
+        setSnackbarOpen(true);
+        setSnackbarSeverity("success")
     };
 
     const removeItem = (itemId) => {
