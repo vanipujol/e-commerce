@@ -10,6 +10,9 @@ import useForm from '../hooks/useForm';
 import {addDoc, collection, getFirestore} from 'firebase/firestore';
 import BuyerForm from '../components/BuyerForm';
 import {Box} from "@mui/material";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
 
 /**
  * A React component that allows users to review their cart and fill in a buyer form for checkout.
@@ -17,7 +20,7 @@ import {Box} from "@mui/material";
  * @returns {JSX.Element} The Checkout component that displays a cart summary and a buyer form.
  */
 function Checkout() {
-    const {cart} = useContext(CartContext);
+    const {cart, clear} = useContext(CartContext);
     const [values, handleChange] = useForm({
         name: '',
         lastName: '',
@@ -79,6 +82,8 @@ function Checkout() {
         sendOrder();
     };
 
+    const MySwal = withReactContent(Swal)
+
     const sendOrder = () => {
         const db = getFirestore();
 
@@ -94,7 +99,12 @@ function Checkout() {
             date: new Date(),
             status: "generada",
         }).then(({id}) => {
-            handleSnackbar(`Orden enviada. El id de la orden es: ${id}`, 'success');
+            clear();
+            MySwal.fire(
+                'Gracias por tu compra!',
+                `Orden enviada. El id de la orden es:  ${id}`,
+                'success'
+            )
         });
     };
 

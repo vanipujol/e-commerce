@@ -26,6 +26,9 @@ Este proyecto es una aplicación web construida con [Vite](https://vitejs.dev/),
 ### serve
 - **serve** es una biblioteca que permite servir la aplicación en un servidor local durante el desarrollo. Facilita la creación de un entorno de desarrollo ágil y la visualización de los cambios en tiempo real.
 
+### SweetAlert
+- **SweetAlert** es una biblioteca que te permite enviar alertas a los usuarios de una forma muy fácil y rápida
+
 ## Instrucciones de Ejecución
 
 Para ejecutar esta aplicación en un entorno de desarrollo, siga estos pasos:
