@@ -1,9 +1,3 @@
-/**
- * A React component that displays a list of items based on the selected category.
- *
- * @returns {JSX.Element} The Category component that lists items of a specific category and provides options to add items to the cart.
- */
-
 import {useParams} from "react-router-dom";
 import useItemsByCategory from "../hooks/useItemsByCategory";
 import ItemList from "../components/ItemList.jsx";
@@ -14,6 +8,11 @@ import {
     Grid, Stack, CircularProgress,
 } from "@mui/material";
 
+/**
+ * A React component that displays a list of items based on the selected category.
+ *
+ * @returns {JSX.Element} The Category component that lists items of a specific category and provides options to add items to the cart.
+ */
 function Category() {
     const params = useParams();
 

@@ -1,11 +1,3 @@
-/**
- * React component for rendering the navigation bar.
- *
- * This component displays the navigation bar with a brand logo, menu options, and a shopping cart widget.
- *
- * @returns {JSX.Element} The rendered navigation bar.
- */
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -24,6 +16,13 @@ import {ListItem, ListItemText} from "@mui/material";
 
 const pages = ['Tortas', 'Tartas', 'Especialidades'];
 
+/**
+ * React component for rendering the navigation bar.
+ *
+ * This component displays the navigation bar with a brand logo, menu options, and a shopping cart widget.
+ *
+ * @returns {JSX.Element} The rendered navigation bar.
+ */
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);

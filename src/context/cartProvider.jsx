@@ -1,3 +1,6 @@
+import {useState} from "react";
+import CartContext from "./cartContext.jsx";
+
 /**
  * Provides a context for managing the shopping cart state and functions.
  *
@@ -8,10 +11,6 @@
  * @param {React.ReactNode} props.children - The child components that will have access to the cart context.
  * @returns {JSX.Element} The rendered CartProvider component.
  */
-
-import {useState} from "react";
-import CartContext from "./cartContext.jsx";
-
 export default function CartProvider({children}) {
     const [cart, setCart] = useState({
         items: [],

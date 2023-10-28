@@ -1,11 +1,3 @@
-/**
- * React component for rendering a shopping cart widget.
- *
- * This component displays the total cost of items in the shopping cart and provides a link to the cart page.
- *
- * @returns {JSX.Element} The rendered shopping cart widget.
- */
-
 import React, {useContext} from "react";
 import CartContext from "../context/cartContext";
 import {Button, Typography, Box, Badge} from "@mui/material";
@@ -13,6 +5,13 @@ import {useNavigate} from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 
+/**
+ * React component for rendering a shopping cart widget.
+ *
+ * This component displays the total cost of items in the shopping cart and provides a link to the cart page.
+ *
+ * @returns {JSX.Element} The rendered shopping cart widget.
+ */
 const CartWidget = () => {
     const {cart} = useContext(CartContext);
     const navigate = useNavigate();

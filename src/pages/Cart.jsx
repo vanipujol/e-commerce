@@ -1,9 +1,3 @@
-/**
- * A React component that displays the contents of the shopping cart and allows users to manage its items.
- *
- * @returns {JSX.Element} The Cart component with the cart items, a summary table, and options to clear the cart or proceed to checkout.
- */
-
 import {useContext} from "react";
 import CartContext from "../context/cartContext.jsx";
 import {useNavigate} from "react-router-dom";
@@ -12,6 +6,11 @@ import CartSummaryTable from "../components/CartSummaryTable.jsx";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from '@mui/icons-material/Send';
 
+/**
+ * A React component that displays the contents of the shopping cart and allows users to manage its items.
+ *
+ * @returns {JSX.Element} The Cart component with the cart items, a summary table, and options to clear the cart or proceed to checkout.
+ */
 function Cart() {
     const {cart, clear} = useContext(CartContext);
     const navigate = useNavigate();

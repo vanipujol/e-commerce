@@ -1,11 +1,3 @@
-/**
- * A container component to display a list of items.
- *
- * This component fetches the list of items and displays them using the `ItemList` component.
- *
- * @returns {JSX.Element} The `ItemListContainer` component.
- */
-
 import Grid from '@mui/material/Grid';
 import useItems from "../hooks/useItems.js";
 import {ItemList} from "../components/ItemList.jsx";
@@ -14,6 +6,13 @@ import CartContext from "../context/cartContext.jsx";
 import Typography from "@mui/material/Typography";
 import {CircularProgress, Stack} from "@mui/material";
 
+/**
+ * A container component to display a list of items.
+ *
+ * This component fetches the list of items and displays them using the `ItemList` component.
+ *
+ * @returns {JSX.Element} The `ItemListContainer` component.
+ */
 const ItemListContainer = () => {
     // Using the custom hook 'useItems' to get the list of cakes
     const {items, isLoading} = useItems();

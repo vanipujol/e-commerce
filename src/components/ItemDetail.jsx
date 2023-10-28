@@ -1,13 +1,3 @@
-/**
- * React component for displaying the details of an item.
- *
- * This component displays information about the item, including its image, title, description, price, and quantity selector.
- *
- * @param {Object} props - The component's props.
- * @param {Object} props.item - The item to display details for.
- * @returns {JSX.Element} The rendered item details component.
- */
-
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import {useQuantitySelector} from "../hooks/useQuantitySelector.js";
@@ -17,7 +7,15 @@ import ItemQuantitySelector from "./ItemQuantitySelector.jsx";
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 
-
+/**
+ * React component for displaying the details of an item.
+ *
+ * This component displays information about the item, including its image, title, description, price, and quantity selector.
+ *
+ * @param {Object} props - The component's props.
+ * @param {Object} props.item - The item to display details for.
+ * @returns {JSX.Element} The rendered item details component.
+ */
 export const ItemDetail = ({item}) => {
     const {addItem} = useContext(CartContext);
     const {counter, decrement, increment, reset} = useQuantitySelector(1, 0, 10)

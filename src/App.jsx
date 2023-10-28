@@ -1,12 +1,3 @@
-/**
- * Main application component responsible for routing and page layout.
- *
- * This component sets up the application structure, including routes for different pages,
- * and renders the main navigation bar, content pages, and the footer.
- *
- * @returns {JSX.Element} The main `App` component.
- */
-
 import './App.css'
 import ItemListContainer from "./pages/ItemListContainer.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
@@ -17,7 +8,14 @@ import Checkout from "./pages/Checkout.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 
-
+/**
+ * Main application component responsible for routing and page layout.
+ *
+ * This component sets up the application structure, including routes for different pages,
+ * and renders the main navigation bar, content pages, and the footer.
+ *
+ * @returns {JSX.Element} The main `App` component.
+ */
 export default function App() {
 
     return (

@@ -1,11 +1,3 @@
-/**
- * A container component to display detailed information about a single item.
- *
- * This component fetches the item data by its ID and displays it in the `ItemDetail` component.
- *
- * @returns {JSX.Element} The `ItemDetailContainer` component.
- */
-
 import {useParams} from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import {Stack, CircularProgress} from "@mui/material";
@@ -13,6 +5,13 @@ import useItemById from "../hooks/useItemById.js";
 import ItemDetail from "../components/ItemDetail.jsx";
 import React from "react";
 
+/**
+ * A container component to display detailed information about a single item.
+ *
+ * This component fetches the item data by its ID and displays it in the `ItemDetail` component.
+ *
+ * @returns {JSX.Element} The `ItemDetailContainer` component.
+ */
 export const ItemDetailContainer = () => {
     // Getting the 'id' parameter from the URL using the 'useParams' hook
     const params = useParams();

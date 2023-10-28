@@ -1,3 +1,9 @@
+import React from 'react';
+import Button from "@mui/material/Button";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import {OutlinedInput} from "@mui/material";
+
 /**
  * React component for rendering a buyer information form.
  *
@@ -7,13 +13,6 @@
  * @param {function} props.handleChange - The function to handle changes in form field values.
  * @returns {JSX.Element} The rendered buyer information form.
  */
-
-import React from 'react';
-import Button from "@mui/material/Button";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import {OutlinedInput} from "@mui/material";
-
 function BuyerForm({onSubmit, values, handleChange}) {
     return (
         <form onSubmit={onSubmit} style={{maxWidth: '600px'}}>

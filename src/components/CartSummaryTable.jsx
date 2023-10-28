@@ -1,11 +1,3 @@
-/**
- * React component for rendering a summary table of items in the shopping cart.
- *
- * @param {Object} props - The component's props.
- * @param {Object} props.cart - An object representing the shopping cart.
- * @returns {JSX.Element} The rendered shopping cart summary table.
- */
-
 import React, {useContext} from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -20,6 +12,13 @@ import CartContext from "../context/cartContext.jsx";
 import DeleteIcon from '@mui/icons-material/Delete';
 import Button from "@mui/material/Button";
 
+/**
+ * React component for rendering a summary table of items in the shopping cart.
+ *
+ * @param {Object} props - The component's props.
+ * @param {Object} props.cart - An object representing the shopping cart.
+ * @returns {JSX.Element} The rendered shopping cart summary table.
+ */
 function CartSummaryTable({cart}) {
 
     const {removeItem} = useContext(CartContext);

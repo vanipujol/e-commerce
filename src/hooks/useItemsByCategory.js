@@ -1,10 +1,3 @@
-/**
- * A custom hook for fetching a list of items from a Firestore database filtered by category.
- *
- * @param {string} category - The category by which to filter the items.
- * @returns {Object} An object containing the list of fetched items and loading state.
- */
-
 import {
     collection,
     getDocs,
@@ -15,6 +8,12 @@ import {
 import {useEffect, useState} from "react";
 import useIsLoading from "./useLoading";
 
+/**
+ * A custom hook for fetching a list of items from a Firestore database filtered by category.
+ *
+ * @param {string} category - The category by which to filter the items.
+ * @returns {Object} An object containing the list of fetched items and loading state.
+ */
 export default function useItemsByCategory(category) {
     const [items, setItems] = useState([]);
     const {stopLoading, isLoading} = useIsLoading();

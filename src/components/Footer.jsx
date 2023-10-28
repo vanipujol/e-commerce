@@ -1,3 +1,8 @@
+import React from 'react';
+import IconButton from '@mui/material/IconButton';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 /**
  * React component for rendering a footer section with social media icons.
  *
@@ -5,12 +10,6 @@
  *
  * @returns {JSX.Element} The rendered footer with social media icons.
  */
-
-import React from 'react';
-import IconButton from '@mui/material/IconButton';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
 function Footer() {
     const instagramURL = "https://www.instagram.com/reposteria.elda";
     const whatsappURL = "https://w.app/reposteriaelda";

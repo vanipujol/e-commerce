@@ -1,9 +1,3 @@
-/**
- * A React component that allows users to review their cart and fill in a buyer form for checkout.
- *
- * @returns {JSX.Element} The Checkout component that displays a cart summary and a buyer form.
- */
-
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
@@ -17,6 +11,11 @@ import {addDoc, collection, getFirestore} from 'firebase/firestore';
 import BuyerForm from '../components/BuyerForm';
 import {Box} from "@mui/material";
 
+/**
+ * A React component that allows users to review their cart and fill in a buyer form for checkout.
+ *
+ * @returns {JSX.Element} The Checkout component that displays a cart summary and a buyer form.
+ */
 function Checkout() {
     const {cart} = useContext(CartContext);
     const [values, handleChange] = useForm({
@@ -93,6 +92,7 @@ function Checkout() {
                 email: values.email,
             },
             date: new Date(),
+            status: "generada",
         }).then(({id}) => {
             handleSnackbar(`Orden enviada. El id de la orden es: ${id}`, 'success');
         });

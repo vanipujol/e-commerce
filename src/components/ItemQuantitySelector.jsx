@@ -1,3 +1,6 @@
+import {Button, ButtonGroup} from "@mui/material";
+import Typography from "@mui/material/Typography";
+
 /**
  * React component for selecting and managing the quantity of an item to be added to the cart.
  *
@@ -15,9 +18,6 @@
  * @param {Object} props.item - The item to be added to the cart.
  * @returns {JSX.Element} The rendered item quantity selector component.
  */
-
-import {Button, ButtonGroup} from "@mui/material";
-import Typography from "@mui/material/Typography";
 
 const ItemQuantitySelector = ({
                                   counter,

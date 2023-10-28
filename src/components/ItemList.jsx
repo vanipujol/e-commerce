@@ -1,14 +1,3 @@
-/**
- * React component for displaying an individual item in a list.
- *
- * This component represents an item in a list with details such as image, title, category, price, and options to add to cart or view details.
- *
- * @param {Object} props - The component's props.
- * @param {Object} props.item - The item to display in the list.
- * @param {function} props.handleClick - The function to handle item interactions.
- * @returns {JSX.Element} The rendered item list component.
- */
-
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
@@ -20,6 +9,16 @@ import React from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 
+/**
+ * React component for displaying an individual item in a list.
+ *
+ * This component represents an item in a list with details such as image, title, category, price, and options to add to cart or view details.
+ *
+ * @param {Object} props - The component's props.
+ * @param {Object} props.item - The item to display in the list.
+ * @param {function} props.handleClick - The function to handle item interactions.
+ * @returns {JSX.Element} The rendered item list component.
+ */
 export const ItemList = ({item, handleClick}) => {
     const navigation = useNavigate();
 

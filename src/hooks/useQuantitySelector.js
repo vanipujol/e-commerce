@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 /**
  * A custom hook for managing quantity selection with minimum and maximum limits.
  *
@@ -6,8 +8,6 @@
  * @param {number} max - The maximum allowed quantity.
  * @returns {Object} An object containing the quantity counter and functions for decrement, increment, and reset.
  */
-
-import {useState} from "react";
 
 export const useQuantitySelector = (initial = 0, min, max) => {
     if (initial < min || initial > max) initial = min

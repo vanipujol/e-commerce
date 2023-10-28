@@ -1,3 +1,5 @@
+import {createContext} from "react";
+
 /**
  * Context object for managing shopping cart data.
  *
@@ -5,9 +7,6 @@
  *
  * @type {React.Context}
  */
-
-import {createContext} from "react";
-
 const CartContext = createContext({});
 
 export default CartContext;
