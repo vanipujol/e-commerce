@@ -1,17 +1,24 @@
+/**
+ * A React component that allows users to review their cart and fill in a buyer form for checkout.
+ *
+ * @returns {JSX.Element} The Checkout component that displays a cart summary and a buyer form.
+ */
+
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import CartSummaryTable from '../components/CartSummaryTable';
-import { useContext } from 'react';
+import {useContext} from 'react';
 import CartContext from '../context/cartContext.jsx';
 import useForm from '../hooks/useForm';
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import {addDoc, collection, getFirestore} from 'firebase/firestore';
 import BuyerForm from '../components/BuyerForm';
+import {Box} from "@mui/material";
 
 function Checkout() {
-    const { cart } = useContext(CartContext);
+    const {cart} = useContext(CartContext);
     const [values, handleChange] = useForm({
         name: '',
         lastName: '',
@@ -34,7 +41,8 @@ function Checkout() {
         setSnackbarOpen(true);
     };
 
-    if (cart.items.length === 0) return <div className={'rosedark-color text-center'} style={{margin: "2em" }}>El carrito está vacío</div>;
+    if (cart.items.length === 0) return <div className={'rosedark-color text-center'} style={{margin: "2em"}}>El carrito
+        está vacío</div>;
 
 
     function isCartValid(cart) {
@@ -53,7 +61,7 @@ function Checkout() {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        if (!isCartValid(cart)){
+        if (!isCartValid(cart)) {
             handleSnackbar('La cantidad de algún producto es mayor que el stock disponible', 'error');
             return;
         }
@@ -85,31 +93,33 @@ function Checkout() {
                 email: values.email,
             },
             date: new Date(),
-        }).then(({ id }) => {
+        }).then(({id}) => {
             handleSnackbar(`Orden enviada. El id de la orden es: ${id}`, 'success');
         });
     };
 
     return (
-        <Grid container direction="column" justify="space-between" >
-            <Grid m={2} item>
-                <Typography variant="h4" className={`rose-color`} style={{marginBottom:'0.5em', marginTop:'0.5em'}} >Resumen del carrito</Typography>
-                <CartSummaryTable cart={cart} />
+        <Box display="flex" flexDirection="column" m={3}>
+            <Grid item>
+                <Typography variant="h4" className={`rose-color`} style={{marginBottom: '0.5em', marginTop: '0.5em'}}>Resumen
+                    del carrito</Typography>
+                <CartSummaryTable cart={cart}/>
             </Grid>
-            <Grid m={2} item>
-                <Typography variant="h4" className={`rose-color`} style={{marginBottom:'0.5em'}} >Formulario de compra</Typography>
-                <BuyerForm onSubmit={onSubmit} values={values} handleChange={handleChange} />
+            <Grid mt={2} item>
+                <Typography variant="h4" className={`rose-color`} style={{marginBottom: '0.5em'}}>Formulario de
+                    compra</Typography>
+                <BuyerForm onSubmit={onSubmit} values={values} handleChange={handleChange}/>
             </Grid>
             <Snackbar
                 open={snackbarOpen}
                 autoHideDuration={6000}
                 onClose={handleSnackbarClose}
             >
-                <Alert  variant="filled" severity={snackbarSeverity} onClose={handleSnackbarClose}>
+                <Alert variant="filled" severity={snackbarSeverity} onClose={handleSnackbarClose}>
                     {snackbarMessage}
                 </Alert>
             </Snackbar>
-        </Grid>
+        </Box>
     );
 }
 

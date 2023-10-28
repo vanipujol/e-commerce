@@ -1,3 +1,13 @@
+/**
+ * React component for displaying the details of an item.
+ *
+ * This component displays information about the item, including its image, title, description, price, and quantity selector.
+ *
+ * @param {Object} props - The component's props.
+ * @param {Object} props.item - The item to display details for.
+ * @returns {JSX.Element} The rendered item details component.
+ */
+
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import {useQuantitySelector} from "../hooks/useQuantitySelector.js";
@@ -9,8 +19,8 @@ import Snackbar from "@mui/material/Snackbar";
 
 
 export const ItemDetail = ({item}) => {
-    const { addItem } = useContext(CartContext);
-    const {counter, decrement, increment, reset} = useQuantitySelector(1,0,10)
+    const {addItem} = useContext(CartContext);
+    const {counter, decrement, increment, reset} = useQuantitySelector(1, 0, 10)
 
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
     const [snackbarSeverity, setSnackbarSeverity] = React.useState('success');
@@ -20,27 +30,27 @@ export const ItemDetail = ({item}) => {
     };
 
     return (
-        <Grid container spacing={5} style={{ display: 'flex', justifyContent: 'center', marginTop: '3em' }}>
-            <Grid itemxs={12} sm={12} md={3.5} container justifyContent="center">
+        <Grid container spacing={5} style={{display: 'flex', justifyContent: 'center', marginTop: '3em'}}>
+            <Grid item xs={12} sm={6} md={4} container justifyContent="center">
                 <div>
                     <img
                         src={item.image}
                         alt={item.title}
-                        style={{ maxWidth: '100%' }}
+                        style={{maxWidth: '100%'}}
                     />
                 </div>
             </Grid>
-            <Grid item xs={12} sm={6} md={4} >
+            <Grid item xs={11} sm={6} md={4}>
                 <Typography className={`rose-color`} variant="h4" gutterBottom>
                     {item.title}
                 </Typography>
-                <Typography style={{ whiteSpace: 'pre-line' }} variant="h6" gutterBottom>
+                <Typography style={{whiteSpace: 'pre-line'}} variant="h6" gutterBottom>
                     Descripción: {item.description}
                 </Typography>
                 <Typography gutterBottom className={`rose-color mt-4`} variant="h5">
                     Precio: ${item.price}
                 </Typography>
-                <Typography style={{ whiteSpace: 'pre-line' }} variant="h6" gutterBottom>
+                <Typography style={{whiteSpace: 'pre-line'}} variant="h6" gutterBottom>
                     Recordá que tus pedidos se realizan con 48hs de anticipación.
                 </Typography>
                 <ItemQuantitySelector

@@ -1,10 +1,16 @@
-import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { useEffect, useState } from "react";
+/**
+ * A custom hook for fetching a list of items from a Firestore database.
+ *
+ * @returns {Object} An object containing the list of fetched items and loading state.
+ */
+
+import {collection, getDocs, getFirestore} from "firebase/firestore";
+import {useEffect, useState} from "react";
 import useIsLoading from "./useLoading";
 
 export default function useItems() {
     const [items, setItems] = useState([]);
-    const { stopLoading, isLoading } = useIsLoading();
+    const {stopLoading, isLoading} = useIsLoading();
 
     useEffect(() => {
         const db = getFirestore();
@@ -28,5 +34,5 @@ export default function useItems() {
             });
     }, [stopLoading]);
 
-    return { items, isLoading };
+    return {items, isLoading};
 }

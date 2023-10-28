@@ -1,3 +1,11 @@
+/**
+ * A container component to display detailed information about a single item.
+ *
+ * This component fetches the item data by its ID and displays it in the `ItemDetail` component.
+ *
+ * @returns {JSX.Element} The `ItemDetailContainer` component.
+ */
+
 import {useParams} from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import {Stack, CircularProgress} from "@mui/material";
@@ -8,22 +16,24 @@ import React from "react";
 export const ItemDetailContainer = () => {
     // Getting the 'id' parameter from the URL using the 'useParams' hook
     const params = useParams();
-    const { item, isLoading } = useItemById(params.id);
+    const {item, isLoading} = useItemById(params.id);
 
     if (isLoading) {
         return (
-            <Stack sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }} spacing={2} direction="row">
-                <CircularProgress style={{color:'#623d41'}} />
+            <Stack sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh'}}
+                   spacing={2} direction="row">
+                <CircularProgress style={{color: '#623d41'}}/>
             </Stack>
         )
     }
 
-    if (!item) return <div className={'rosedark-color text-center'} style={{margin: '2em'}}> No hay productos con el id: {params.id}</div>;
+    if (!item) return <div className={'rosedark-color text-center'} style={{margin: '2em'}}> No hay productos con el
+        id: {params.id}</div>;
 
     // Rendering the cake details
     return (
-        <Grid >
-            <ItemDetail item={item} />
+        <Grid>
+            <ItemDetail item={item}/>
         </Grid>
     );
 };

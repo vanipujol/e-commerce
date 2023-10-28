@@ -13,12 +13,6 @@ body {
     color: #623d41
 }
 
-@media (min-width: 992px)
-.navbar-expand-lg {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-}
-
 .nav-link{
     text-decoration: none;
     color: black;
@@ -28,7 +22,4 @@ body {
     text-align: center;
 }
 
-.rose-button {
-    color: #be9397;
-    border: 1px solid #be9397;
-}
+
